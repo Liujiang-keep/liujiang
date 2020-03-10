@@ -1,0 +1,191 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+html,body{
+	width: 100%;
+	height: 100%;
+	background-color: #dd5533;
+	display: flex;
+	/* 水平居中 */
+	justify-content: center;
+	/* 垂直居中 */
+	align-items: center;
+}
+
+.moster{
+	position: relative;
+	width: 110px;
+	height: 100px;
+	border-radius:20px ;
+	background-color: #e55a54;
+	margin: 10px;
+	display: flex;
+	/* 水平居中 */
+	justify-content: center;
+	/* 垂直居中 */
+	align-items: center;
+	flex-direction: column;
+	/* 阴影效果 */
+	box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+	/* infinite 无限循环  alternate 来回都做动画 */
+	animation: jumping 0.8s infinite alternate;
+}
+.moster .eye{
+	width: 40%;
+	height: 40%;
+	background-color: #fff;
+	border-radius: 50%;
+	margin: 10px;
+	display: flex;
+	/* 水平居中 */
+	justify-content: center;
+	/* 垂直居中 */
+	align-items: center;
+	flex-direction: column;
+}
+.moster .eye .eyeBall{
+	width: 40%;
+	height: 40%;
+	background-color:#0c4475;
+	border-radius: 12px;
+	animation: eyemove 1.2s infinite alternate;
+	
+}
+.mouth{
+	width: 32%;
+	height: 12px;
+	background-color: #FFFFFF;
+	border-radius: 12px;
+}
+.moster::before
+,.moster:after{
+	position: absolute;
+	content: '';
+	display: block;
+	height: 10px;
+	width: 20%;
+	border-radius: 20%;
+	background-color: #fff;
+	left: 50%;
+	top: -10px;
+}
+.moster:before{
+	transform: translate(-70%) rotate(45deg);
+}
+.moster:after{
+	transform: translate(-30%) rotate(-45deg);
+}
+
+
+
+.moster1{
+	margin-left: 100px;
+	position: relative;
+	width: 110px;
+	height: 100px;
+	border-radius:20px ;
+	background-color: #0c4475;
+	margin: 10px;
+	display: flex;
+	/* 水平居中 */
+	justify-content: center;
+	/* 垂直居中 */
+	align-items: center;
+	flex-direction: column;
+	/* 阴影效果 */
+	box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+	/* infinite 无限循环  alternate 来回都做动画 */
+	animation: jumping 0.8s infinite alternate;
+	animation-delay: 0.5s;
+}
+.moster1 .eye1{
+	width: 40%;
+	height: 40%;
+	background-color: #fff;
+	border-radius: 50%;
+	margin: 10px;
+	display: flex;
+	/* 水平居中 */
+	justify-content: center;
+	/* 垂直居中 */
+	align-items: center;
+	flex-direction: column;
+}
+.moster1 .eye1 .eyeBall1{
+	width: 40%;
+	height: 40%;
+	background-color:#e55a54;
+	border-radius: 12px;
+	animation: eyemove 1.2s infinite alternate;
+}
+.mouth1{
+	width: 32%;
+	height: 12px;
+	background-color: #FFFFFF;
+	border-radius: 12px;
+}
+.moster1::before
+,.moster1:after{
+	position: absolute;
+	content: '';
+	display: block;
+	height: 10px;
+	width: 20%;
+	border-radius: 20%;
+	background-color: #fff;
+	left: 50%;
+	top: -10px;
+}
+.moster1:before{
+	transform: translate(-70%) rotate(45deg);
+}
+.moster1:after{
+	transform: translate(-30%) rotate(-45deg);
+}
+
+@keyframes jumping{
+	50%{
+		top: 0;
+		box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+	}
+	100%{
+		top: -50px;
+		box-shadow: 0 120px 20px rgba(0,0,0,0.1);
+	}
+}
+@keyframes eyemove{
+	0%,10%{
+		transform: translate(50%);
+	}
+	100%{
+		transform: translate(-50%);
+	}
+}
+/* 
+.pageloading{
+	width: 100%;
+	height: 100%;
+	background-color: #0C4475;
+	position: fixed;
+	display: flex;
+	/* 水平居中 */
+	justify-content: center;
+	/* 垂直居中 */
+	align-items: center;
+	flex-direction: column;
+}
+.pageloading .loading{
+	width: 200px;
+	height: 8px;
+	background-color: #fff;
+	border-radius: 5px;
+	margin-top: 50px;
+	overflow: hidden;
+}
+.bar{
+	width: 0%;
+	height: 100%;
+	background-color: #db4d6d;
+}
+ */
